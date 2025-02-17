@@ -1,0 +1,18 @@
+function findFulcrum(arr) {
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        var pre = 0;
+        var post = 0;
+        for (let a = 0; a < i - 1; a++) {
+            pre = pre + arr[a]
+        }
+        for (let b = i + 1; b < arr.length - 1; b++) {
+            post = post + post[b]
+        }
+        if (pre === post) {
+            return arr[i]
+        }
+
+    }
+    return -1;
+}
